@@ -1,8 +1,10 @@
 def add(arg_list):
-    num1 = int(arg_list[0])
-    num2 = int(arg_list[1])
+    sum = 0
+    for index in range(0,len(arg_list)):
+        addend = int(arg_list[index])
+        sum += addend
 
-    return num1 + num2
+    return sum
 
 def subtract(arg_list):
     num1 = int(arg_list[0])
