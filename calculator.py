@@ -16,7 +16,7 @@ while True:
     input_string = raw_input(">")
 
     #tokenize user input (first arg is operator, rest are arguments)
-    tokens = input_string.split(" ")
+    tokens = input_string.split()
 
     #get just the arguments
     args = tokens[1:]

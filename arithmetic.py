@@ -18,15 +18,18 @@ def multiply(arg_list):
     product = 1
     for index in range(0,len(arg_list)):
         factor = int(arg_list[index])
-        sum *= factor
+        product *= factor
 
-    return sum
+    return product
 
 def divide(arg_list):
-    num1 = float(arg_list[0])
-    num2 = int(arg_list[1])
+    quotient = float(arg_list[0])
+    for index in range(1,len(arg_list)):
+        divisor = float(arg_list[index])
+        quotient /= divisor
+        print "q= " , quotient
 
-    return num1/num2
+    return quotient
 
 def square(arg_list):
     num1 = int(arg_list[0])
@@ -39,16 +42,19 @@ def cube(arg_list):
     return num1 ** 3
 
 def power(arg_list):
-    base = int(arg_list[0])
-    exponent = float(arg_list[1])
+    result = int(arg_list[0])
+    for index in range(1,len(arg_list)):
+        exponent = float(arg_list[index])
+        result = result ** exponent
 
-    return base ** exponent
+    return result
 
 def mod(arg_list):
-    num1 = int(arg_list[0])
-    num2 = int(arg_list[1])
+    result = int(arg_list[0])
+    for index in range(1,len(arg_list)):
+        modulus = int(arg_list[index])
+        result = result % modulus
 
-    return num1 % num2
-
+    return result
 
 
