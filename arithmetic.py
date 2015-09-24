@@ -7,16 +7,20 @@ def add(arg_list):
     return sum
 
 def subtract(arg_list):
-    num1 = int(arg_list[0])
-    num2 = int(arg_list[1])
+    difference = 0
+    for index in range(0,len(arg_list)):
+        subtractend = int(arg_list[index])
+        difference -= subtractend
 
-    return num1 - num2
+    return difference
 
 def multiply(arg_list):
-    num1 = int(arg_list[0])
-    num2 = int(arg_list[1])
+    product = 1
+    for index in range(0,len(arg_list)):
+        factor = int(arg_list[index])
+        sum *= factor
 
-    return num1 * num2
+    return sum
 
 def divide(arg_list):
     num1 = float(arg_list[0])
