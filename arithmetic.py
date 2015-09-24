@@ -7,8 +7,8 @@ def add(arg_list):
     return sum
 
 def subtract(arg_list):
-    difference = 0
-    for index, num in enumerate(arg_list):
+    difference = int(arg_list[0])
+    for index in range(1,len(arg_list)):
         subtractend = int(arg_list[index])
         difference -= subtractend
 
@@ -23,11 +23,10 @@ def multiply(arg_list):
     return product
 
 def divide(arg_list):
-    quotient = arg_list[0]
+    quotient = float(arg_list[0])
     for num in arg_list[1:]:
-        divisor = float(arg_list[index])
+        divisor = float(num)
         quotient /= divisor
-        print "q= " , quotient
 
     return quotient
 
@@ -42,7 +41,7 @@ def cube(arg_list):
     return num1 ** 3
 
 def power(arg_list):
-    result = arg_list.pop(1)
+    result = int(arg_list.pop(0))
     for num in arg_list:
         exponent = float(num)
         result = result ** exponent
